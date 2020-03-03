@@ -1,0 +1,153 @@
+.header {
+  background-color: #000;
+  padding: 15px 0;
+  position: relative;
+
+  &__underline {
+    border-bottom: 1px solid #fff;
+    transition: all 0.25s;
+
+    &:hover {
+      color: #fb3;
+      border-bottom-color: transparent;
+    }
+  }
+
+  &__adress,
+  &__callback,
+  &__phone {
+    text-align: right;
+    @include fz(14);
+
+    a {
+      cursor: pointer;
+      color: #fff;
+    }
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  &__search {
+    svg {
+      cursor: pointer;
+    }
+
+    &.active {
+      svg {
+        * {
+          fill: #fb3;
+        }
+      }
+    }
+  }
+
+  &__phone {
+    text-align: right;
+    @include fz(18);
+
+    a {
+      color: #fff;
+
+      span {
+        font-weight: bold;
+        @include fz(18)
+      }
+
+      &:hover {
+        color: #fb3;
+      }
+    }
+  }
+
+  &__logo {
+    max-width: 250px;
+
+    &_small {
+      display: none;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      * {
+        fill: #e0e0e0;
+      }
+    }
+  }
+
+  &__icon {
+    svg {
+      * {
+        fill: #fff;
+      }
+    }
+
+    &_map {
+      padding-right: 5px;
+
+      svg {
+        width: 20px;
+        height: auto;
+      }
+    }
+
+    &_search {
+      svg {
+        width: 20px;
+      }
+    }
+
+    &_phone {
+      padding-right: 5px;
+
+      svg {
+        width: 20px;
+      }
+    }
+
+    &_burger {
+      svg {
+        width: 20px;
+      }
+    }
+  }
+
+  &__search {
+    text-align: right;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header {
+    &__callback {
+      @include fz(13)
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .header {
+    &__phone {
+      @include fz(13)
+    }
+
+    &__icon {
+      &_phone {
+        display: none;
+      }
+    }
+
+    &__logo {
+      max-width: 35px;
+
+      &_small {
+        display: block;
+      }
+
+      &_medium {
+        display: none;
+      }
+    }
+  }
+}
