@@ -69,7 +69,7 @@ function searchShow() {
  * Отображение меню
  */
 function getMobileMenu() {
-  if (window.screen.width >= 992) {
+  if (window.screen.width > 991) {
     $('.menu').show();
   } else {
     if ($('.menu').hasClass('show')) {
