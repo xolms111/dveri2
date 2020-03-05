@@ -12,7 +12,7 @@
 
   input {
     width: 100%;
-    height: 41px !important;
+    height: 43px !important;
 
     &.form-control {
       border-radius: 0;
@@ -24,4 +24,61 @@
   height: 400px;
   width: 100%;
 }
+
+.main-content {
+  .h5 {
+    font-weight: bold;
+  }
+}
 @import "nav";
+@import "carousel";
+@import "category";
+@import "advantage";
+@import "manufacturer";
+@import "blog";
+@import "product";
+@import "footer";
+
+.modal {
+  &__image {
+    img {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      max-width: 250px;
+    }
+  }
+}
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+.submenu {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    ul {
+      padding-left: 5px;
+      li:before {
+        content: "-";
+        text-indent: -5px;
+      }
+    }
+    li {
+      padding: 5px 0;
+    }
+    a {
+      color: #000;
+    }
+  }
+}
+.lb-number {
+  display: none !important;
+}
+@media screen and (max-width: 991px) {
+  .catalog-row {
+    flex-direction: row-reverse;
+  }
+}

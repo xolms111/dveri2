@@ -1,0 +1,18 @@
+.advantage {
+  &__image {
+    padding-right: 10px;
+
+    svg {
+      max-width: 40px;
+      height: auto;
+
+      * {
+        fill: #ffa000;
+      }
+    }
+  }
+
+  &__text {
+    color: #ffa000;
+  }
+}

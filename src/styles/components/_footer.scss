@@ -1,0 +1,14 @@
+.footer {
+    &__logo {
+        max-width: 300px;
+        text-align: right;
+        svg {
+            * {
+                fill: #fff;
+            }
+        }
+    }
+    p {
+        margin-bottom: .3em;
+    }
+}

@@ -16,6 +16,36 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       template: './src/index.html',
+      filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/catalog.html',
+      filename: 'catalog.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/product.html',
+      filename: 'product.html'
+
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/404.html',
+      filename: '404.html'
+
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/content.html',
+      filename: 'content.html'
+
+    }),
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/503.html',
+      filename: '503.html'
+
     }),
     new CopyWebpackPlugin([{
         from: __dirname + '/src/static',
@@ -32,7 +62,9 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       '$': 'jquery',
-      'mdb': 'mdbootstrap'
+      'mdb': 'mdbootstrap',
+      'jQuery': 'jquery',
+      'window.jQuery': 'jquery'
     }),
   ],
   module: {

@@ -1,0 +1,28 @@
+.carousel-main {
+  .carousel-item {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(#000, .5);
+    }
+  }
+
+  .slider {
+    &__wrap {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .h1 {
+    color: #fff;
+  }
+}

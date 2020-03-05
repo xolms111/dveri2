@@ -1,0 +1,143 @@
+.product {
+  margin-bottom: 25px;
+
+  &__image {
+    text-align: center;
+    max-width: 150px;
+    margin: 0 auto;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+
+  &__item {
+    border-radius: 10em;
+    cursor: pointer;
+    overflow: hidden;
+
+    img {
+      vertical-align: top;
+      width: 100%;
+    }
+  }
+
+  &__carousel {
+    position: relative;
+    padding: 0 15px;
+
+    .owl-carousel {
+      position: static;
+    }
+
+    .owl-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      @include fz(30);
+      z-index: 3;
+
+    }
+
+    .owl-nav {
+      button {
+        opacity: 1;
+        transition: all .25s;
+
+        span {
+          @include fz(33);
+          position: relative;
+          top: -4px;
+        }
+
+        &.disabled {
+          opacity: 0;
+        }
+      }
+    }
+
+    .owl-next {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 3;
+
+    }
+  }
+
+  .card-footer {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.main-product {
+  max-width: 100%;
+  .carousel__wrapper {
+    position: relative;
+    padding: 0 25px;
+  }
+  .sub-product__carousel {
+    position: static;
+
+    .owl-nav {
+      .owl-next {
+        right: 0;
+      }
+
+      .owl-prev {
+        left: 0;
+      }
+
+      .owl-next,
+      .owl-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+
+        span {
+          position: relative;
+          top: -20px;
+          @include fz(50)
+        }
+      }
+    }
+  }
+  &__desc {
+    p {
+      margin-bottom: 0.3em;
+    }
+  }
+  &__images {
+    a {
+      display: inline-block;
+      margin: 2px;
+      border-radius: 10em;
+      overflow: hidden;
+      img {
+        max-width: 50px;
+        width: 100%;
+      }
+    }
+  }
+  &__select {
+    p {
+      margin-bottom: 0.3em;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .product {
+    &__image {
+      max-width: 250px;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.category {
+  height: 100%;
+  overflow: hidden;
+  padding: 5px 0;
+  position: relative;
+
+  img {
+    height: 100%;
+    vertical-align: top;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(#000, .5);
+  }
+  &_page {
+    height: auto;
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+@media screen and (min-width: 991px) {
+  .category {
+    &__wrap {
+      .row {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    &__wrap .row > div {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .category {
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
