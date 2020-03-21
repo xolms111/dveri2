@@ -37,12 +37,6 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       hash: true,
-      template: './src/content.html',
-      filename: 'content.html'
-
-    }),
-    new HtmlWebpackPlugin({
-      hash: true,
       template: './src/503.html',
       filename: '503.html'
 

@@ -72,6 +72,12 @@ $(document).ready(function() {
   startProductSlider();
   $('.material-tooltip-main').tooltip();
   setCarouselsProduct();
+  $('.main-product select[name=size]').change(function(e) {
+    $('#mainCart select[name=size] option[value='+e.target.value+']').attr("selected", "selected")
+  })
+  $('.main-product select[name=system]').change(function(e) {
+    $('#mainCart select[name=system] option[value='+e.target.value+']').attr("selected", "selected")
+  })
 
 })
 Waves.attach('.btn');
@@ -117,6 +123,18 @@ function getSlideHeight() {
   $('.carousel-main .carousel-item').css({
     height: height > carouselHeight ? (height + 80 + 'px') : (carouselHeight + 'px')
   })
+  if($('.full-screen')) {
+    if($('.full-screen .row').height() > carouselHeight) {
+      $('.full-screen').css({
+        height: height + 80 + 'px'
+      })
+    }
+    else {
+      $('.full-screen').css({
+        height: carouselHeight + 'px'
+      })
+    }
+  }
 }
 
 /**

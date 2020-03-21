@@ -77,6 +77,12 @@
 .lb-number {
   display: none !important;
 }
+
+.full-screen {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 @media screen and (max-width: 991px) {
   .catalog-row {
     flex-direction: row-reverse;
